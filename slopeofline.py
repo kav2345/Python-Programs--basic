@@ -1,31 +1,39 @@
 ***
- Finding the Slope of a Line
-Problem Statement
-Ajay and Binoy are curious about the slope of the line joining their houses. Given the coordinates of the 2 endpoints of a line (x1,y1)(x_1, y_1)(x1​,y1​) and (x2,y2)(x_2, y_2)(x2​,y2​), write a Python program to find the slope of the line.
-Formula:
-slope=x2​−x1/​y2​−y1​​
-Input Format
-Input consists of 4 integers. The first integer corresponds to x1x_1x1​. The second integer corresponds to y1y_1y1​. The third and fourth integers correspond to x2x_2x2​ and y2y_2y2​ respectively.
-Output Format
-Refer to the Sample Input and Output for exact formatting specifications. [All floating point values are displayed correct to 2 decimal places]
-Sample Input
+Tamilnadu was battling one if it’s worst floods in a century last December, as several part of the state have been submerged and cut off from essential supplies. It was heartening that the Cricketers came forward to contribute for the cause of floods and it was decided amongst the team that the senior players donate 50% of their salary and junior players to donate 40% against the flood relief measures
+Assume there are 6 senior players and 5 junior players. The salary of senior players Rs.X and that of junior players is Rs.Y. Find the total contribution from the cricket team towards the floods.
+Input format:
+First line of the input is an integer “X” that specifies the salary of the senior players in rupees.
+Second line is an integer “Y” that specifies the salary of the junior players in rupees.
+Output format:
+Output should display a flood that gives the total contribution of money in rupees from the cricket team. The float value should be displayed correct to 2 decimal places.
+Sample input and output 1:
+45000
+40000
+215000.00
+Sample input and output 2:
+78000
+60000
+354000.00
 
-1
-2
-3
-6
-
-Sample Output
-
-The slope of the line joining Ajay's house and Binoy's house is 2.00
 ***
-x1 = int(input())
-y1 = int(input())
-x2 = int(input())
-y2 = int(input())
+def calculate_contribution():
+    # Input the salaries of senior and junior players
+    senior_salary = int(input())
+    junior_salary = int(input())
+    
+    # Define the number of players
+    num_senior_players = 6
+    num_junior_players = 5
+    
+    # Calculate contributions
+    senior_contribution = (senior_salary * 0.50) * num_senior_players
+    junior_contribution = (junior_salary * 0.40) * num_junior_players
+    
+    # Total contribution
+    total_contribution = senior_contribution + junior_contribution
+    
+    # Print the total contribution rounded to 2 decimal places
+    print(f"{total_contribution:.2f}")
 
-if x2 != x1:
-    slope = (y2 - y1) / (x2 - x1)
-    print(f"The slope of the line joining Ajay's house and Binoy's house is {slope:.2f}")
-else:
-    print("The line is vertical, slope is undefined")
+if __name__ == "__main__":
+    calculate_contribution()
